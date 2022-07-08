@@ -31,38 +31,47 @@
                       conversion="V+ID200-74.3" - result is incoming value + 'Body Electronics->Gear' - 74.3 -->
 
       <!-- 1st CAN frame, RPM, MAP, CLT, TPS -->
+      <!--RPM-->
       <value targetId="37" units="RPM" offset="1" length="2" endianess="big" ></value>
-	  <value targetId="152" units="C" offset="5" length="1"  conversion="V-40" endianess="big"></value>
-	  <value targetId="180" offset="6" length="1"  conversion="V*0.315" endianess="big"></value>
-
-   
+      <!--Engine Oil Temperature-->
+	    <value targetId="152" units="C" offset="5" length="1"  conversion="V-40" endianess="big"></value>
+      <!--Engine Oil Level-->
+	    <value targetId="180" offset="6" length="1"  conversion="V*0.315" endianess="big"></value>
 
     </frame>
       
     <frame id="0512">
-	  <value targetId="64" units="mph" offset="2" length="2"  conversion="((V/10)/3)*1.111" endianess="big"></value>
+
+      <!--Vehicle Speed in MPH-->
+	    <value targetId="64" units="mph" offset="2" length="2"  conversion="((V/10)/3)*1.111" endianess="big"></value>
 
     </frame>
-	    <frame id="1032">
-	  		  <value targetId="170"  offset="0" length="1"  conversion="V*1.66667"   endianess="big"></value>
-			  <value targetId="173"  offset="1" length="1"  conversion="V-54"   endianess="big"></value>
 
+
+	  <frame id="1032">
+	  		
+        <!--Fuel Level-->
+        <value targetId="170"  offset="0" length="1"  conversion="V*1.66667"   endianess="big"></value>
+        <!--Ambient Air Temperature-->
+			  <value targetId="173"  offset="1" length="1"  conversion="V-54"   endianess="big"></value>
 
     </frame>
 
     <!-- 3rd CAN frame contains rest of Arduino analog inputs -->
     <frame id="1544">
-		  <value targetId="14" units="C" offset="0" length="1"  conversion="V-40" endianess="big"></value>
+		  
+      <!--Coolant Temp -->
+      <value targetId="14" units="C" offset="0" length="1"  conversion="V-40" endianess="big"></value>
+      <!--Intake Air Temp -->
 		  <value targetId="27" units="C" offset="1" length="1"  conversion="V-40" endianess="big"></value>
-
 
     </frame>
 
     <frame id="1048">
-	<value targetId="139" unit="Gear" offset="0" length="1" enum="82:R,78:N,80:P,49:1,50:2,51:3,52:4,68:D"></value>
-	<value targetId="140" unit="Gear" offset="4" length="1" enum="189:P>R,187:R,221:P,17:1,33:1>2,18:2>1,34:2,32:N>2,205:P>R2,204:R2,192:N>R2,50:2>3,35:3>2,51:3,67:3>4,52:4>3,68:4,84:4>5,69:5>4,85:5,0:N,16:N>D,176:N>R"></value>
 
-
+      <!--Transmission Gear-->
+      <value targetId="139" unit="Gear" offset="0" length="1" enum="82:R,78:N,80:P,49:1,50:2,51:3,52:4,68:D"></value>
+	    <!-- <value targetId="140" unit="Gear" offset="4" length="1" enum="189:P>R,187:R,221:P,17:1,33:1>2,18:2>1,34:2,32:N>2,205:P>R2,204:R2,192:N>R2,50:2>3,35:3>2,51:3,67:3>4,52:4>3,68:4,84:4>5,69:5>4,85:5,0:N,16:N>D,176:N>R"></value> -->
 
     </frame>
 
