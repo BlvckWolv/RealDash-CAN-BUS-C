@@ -32,7 +32,7 @@
         <!--Ambient Air Temperature-->
 			  <value targetId="173"  offset="1" length="1"  conversion="V-54"   endianess="big"></value>
         <!--Driver Door-->
-        <value targetId="162" offset="1"  length="1" endianess="big"></value>
+        <value targetId="162" offset="0"  length="1" endianess="big"></value>
         
 
     </frame>
@@ -51,7 +51,7 @@
 
       <!--Transmission Gear-->
       <value targetId="139" unit="Gear" offset="0" length="1" enum="82:R,78:N,80:P,49:1,50:2,51:3,52:4,68:D"></value>
-	    <!-- <value targetId="140" unit="Gear" offset="4" length="1" enum="189:P>R,187:R,221:P,17:1,33:1>2,18:2>1,34:2,32:N>2,205:P>R2,204:R2,192:N>R2,50:2>3,35:3>2,51:3,67:3>4,52:4>3,68:4,84:4>5,69:5>4,85:5,0:N,16:N>D,176:N>R"></value> -->
+	    <value targetId="140" unit="Gear" offset="4" length="1" enum="189:P>R,187:R,221:P,17:1,33:1>2,18:2>1,34:2,32:N>2,205:P>R2,204:R2,192:N>R2,50:2>3,35:3>2,51:3,67:3>4,52:4>3,68:4,84:4>5,69:5>4,85:5,0:N,16:N>D,176:N>R"></value> 
 
     </frame>
 
